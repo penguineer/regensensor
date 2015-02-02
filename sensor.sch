@@ -15882,7 +15882,6 @@ http://www.ee.siue.edu/~alozows/library/datasheets/BFR96.pdf</description>
 <part name="D2" library="diode" deviceset="1N4148" device="DO35-7"/>
 <part name="C7" library="resistor" deviceset="C-EU" device="050-025X075" value="5p"/>
 <part name="L1" library="inductors" deviceset="BC12" device="" value="1m"/>
-<part name="C8" library="resistor" deviceset="C-EU" device="050-025X075" value="1u5"/>
 <part name="R9" library="resistor" deviceset="R-EU_" device="0207/7" value="4k7"/>
 <part name="R11" library="resistor" deviceset="R-EU_" device="0207/7" value="2k7"/>
 <part name="R12" library="resistor" deviceset="R-EU_" device="0207/7" value="4k7"/>
@@ -15892,11 +15891,12 @@ http://www.ee.siue.edu/~alozows/library/datasheets/BFR96.pdf</description>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
 <part name="LED2" library="led" deviceset="LED" device="5MM" value="rt"/>
-<part name="R13" library="resistor" deviceset="R-EU_" device="0207/7"/>
+<part name="R13" library="resistor" deviceset="R-EU_" device="0207/7" value="470R"/>
 <part name="SUPPLY6" library="supply2" deviceset="VDD" device=""/>
 <part name="SUPPLY7" library="supply2" deviceset="VDD" device=""/>
-<part name="T1" library="transistor-neu-to92" deviceset="*-NPN-" device="TO92"/>
+<part name="T1" library="transistor-neu-to92" deviceset="*-NPN-" device="TO92" value="BC 141-10"/>
 <part name="R14" library="resistor" deviceset="R-EU_" device="0207/7" value="270R"/>
+<part name="C8" library="resistor" deviceset="CPOL-EU" device="E3.5-8" value="1u5"/>
 </parts>
 <sheets>
 <sheet>
@@ -15935,7 +15935,6 @@ http://www.ee.siue.edu/~alozows/library/datasheets/BFR96.pdf</description>
 <instance part="D2" gate="G$1" x="335.28" y="170.18" rot="R180"/>
 <instance part="C7" gate="G$1" x="347.98" y="180.34" rot="R180"/>
 <instance part="L1" gate="G$1" x="347.98" y="154.94" rot="R90"/>
-<instance part="C8" gate="G$1" x="215.9" y="83.82"/>
 <instance part="R9" gate="G$1" x="215.9" y="104.14" rot="R90"/>
 <instance part="R11" gate="G$1" x="256.54" y="81.28" rot="R90"/>
 <instance part="R12" gate="G$1" x="256.54" y="104.14" rot="R90"/>
@@ -15950,6 +15949,7 @@ http://www.ee.siue.edu/~alozows/library/datasheets/BFR96.pdf</description>
 <instance part="SUPPLY7" gate="G$1" x="43.18" y="121.92"/>
 <instance part="T1" gate="G$1" x="40.64" y="111.76"/>
 <instance part="R14" gate="G$1" x="43.18" y="96.52" rot="R270"/>
+<instance part="C8" gate="G$1" x="215.9" y="86.36"/>
 </instances>
 <busses>
 </busses>
@@ -16017,9 +16017,9 @@ http://www.ee.siue.edu/~alozows/library/datasheets/BFR96.pdf</description>
 <pinref part="R11" gate="G$1" pin="1"/>
 <pinref part="GND4" gate="1" pin="GND"/>
 <wire x1="256.54" y1="76.2" x2="215.9" y2="76.2" width="0.1524" layer="91"/>
-<pinref part="C8" gate="G$1" pin="2"/>
+<pinref part="C8" gate="G$1" pin="-"/>
 <wire x1="215.9" y1="76.2" x2="203.2" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="215.9" y1="78.74" x2="215.9" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="215.9" y1="81.28" x2="215.9" y2="76.2" width="0.1524" layer="91"/>
 <junction x="215.9" y="76.2"/>
 </segment>
 <segment>
@@ -16206,15 +16206,15 @@ http://www.ee.siue.edu/~alozows/library/datasheets/BFR96.pdf</description>
 </net>
 <net name="DIGITAL_OUT" class="0">
 <segment>
-<pinref part="C8" gate="G$1" pin="1"/>
 <pinref part="R9" gate="G$1" pin="1"/>
-<wire x1="215.9" y1="86.36" x2="215.9" y2="93.98" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="A" pin="OUT"/>
 <wire x1="215.9" y1="93.98" x2="215.9" y2="99.06" width="0.1524" layer="91"/>
 <wire x1="226.06" y1="93.98" x2="215.9" y2="93.98" width="0.1524" layer="91"/>
 <junction x="215.9" y="93.98"/>
 <wire x1="215.9" y1="93.98" x2="198.12" y2="93.98" width="0.1524" layer="91"/>
 <label x="180.34" y="93.98" size="1.778" layer="95"/>
+<pinref part="C8" gate="G$1" pin="+"/>
+<wire x1="215.9" y1="88.9" x2="215.9" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R13" gate="G$1" pin="2"/>
